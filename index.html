@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erva Öztürk</title>
+    <link href="assets/img/logo-b.png" rel="icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div id="home">
+        <img src="assets/img/bg.png" alt="bg" class="bg">
+        <div class="navbar">
+            <img src="assets/img/logo-b.png" alt="logo">
+            <ul class="hm">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html"> About Me</a></li>
+                <li><a href="port.html"> What I Do</a></li>
+                <li><a href="#contact"> Contact</a></li>
+            </ul>
+            <div class="dropdown">
+                <div class="select">
+                  <span class="selected">Menu</span>
+                  <div class="caret"></div>
+                </div>
+                <ul class="menuu">
+                  <li><a href="#home"> Home</a></li>
+                  <li> <a href="#about">About Me</a></li>
+                  <li> <a href="port.html">Portfolio</a></li>              
+                  <li> <a href="#contact"> Contact</a></li>    
+                </ul>
+                     </div>
+        </div>
+        <div class="anasayfa">
+            <img src="assets/img/logo.png" alt="loogo">
+            <h1 class="art">ERVA ART & DESİGN</h1>
+            <ul class="icon">
+                <li><a href="https://twitter.com/ervolstoy" target="_blank"><i class="fa-brands fa-twitter"></a></i></li>
+                <li><a href="https://www.instagram.com/ervolstoy/" target="_blank"><i class="fa-brands fa-instagram"></a></i></li>
+                <li><a href="https://www.behance.net/ervaztrk" target="_blank"><i class="fa-brands fa-behance"></i></a></li>
+            </ul>
+            
+        </div>
+        <div class="arrow-down"> <a href="about.html"><i class="fa-regular fa-circle-down"></a></i></div>
+    </div>
+
+
+    <div id="about">
+        
+        <img src="assets/img/backround.png" alt="backround" class="about-bgg">
+        <img src="assets/img/6.png" alt="" class="altı">
+        <img src="assets/img/4.png" alt="" class="dört">
+        <div class="bir">
+        <img src="assets/img/program.png" alt="program" class="skills">
+        <img src="assets/img/5640FDFD-A7D2-40A2-A29D-658184FFD2FC.JPG" alt="me" class="me">
+        <h1 class="erva">ERVA ÖZTÜRK</h1>
+        <h3 class="designer"><strong> Graphic Designer</strong></h3>
+        <div class="iletişim">
+            <ul>
+                <li><a href="https://www.google.com/maps/place/İstanbul/@41.0049823,28.7320029,10z/data=!3m1!4b1!4m5!3m4!1s0x14caa7040068086b:0xe1ccfe98bc01b0d0!8m2!3d41.0082376!4d28.9783589" target="_blank"><i class="fa-solid fa-location-dot"><span>Istanbul, Turkiye</span></i></a></li>
+                <li><a href="mailto:ervanurozturkk@gmail.com" target="_blank"><i class="fa-regular fa-envelope"><span>ervanurozturkk@gmail.com</span></i></a></li>
+                <li><a href="tel:(0539)614-7-315" target="_blank"><i class="fa-solid fa-phone"><span>(0539)614-7-315</span></i></a></li>
+                
+            </ul>
+        </div>
+        </div>
+        
+        </div>
+<div id="contact">
+        <script type="text/javascript" src="https://form.jotform.com/jsform/230042928919056"></script></div>
+        
+
+        
+    
+    
+</body>
+<script> 
+    const dropdowns = document.querySelectorAll('.dropdown, dropdown');
+     dropdowns.forEach(dropdown =>{
+         const select = dropdown.querySelector('.select');
+         const caret = dropdown.querySelector('.caret');
+         const menuu = dropdown.querySelector('.menuu');
+         const options = dropdown.querySelector('.menuu li');
+         const selected = dropdown.querySelector('.selected');
+     
+         select.addEventListener('click', () => {
+             select.classList.toggle('select-clicked');
+             caret.classList.toggle('caret-rotate');
+             menuu.classList.toggle('menuu-open');
+         });
+     
+         options.forEach(option => {
+             option.addEventListener('click', () => {
+                 
+                 selected.innerText = option.innerText;
+                 select.classList.remove('select-clicked');
+                 caret.classList.remove('caret-rotate');
+                 menuu.classList.remove('menuu-open');
+                 options.forEach(option => {
+                     option.classList.remove('active');
+                 });
+                 option.classList.add('active');
+                 
+             })
+         })
+     })
+     </script>
+</html>
